@@ -1,0 +1,13 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: start specific number of multiple instances
+    amazon.aws.ec2_instance:
+      instance_type: t3.small
+      image_id: ami-09694bfab577e90b0
+      count: 3
+      region: us-east-2
+      vpc_subnet_id: subnet-043dd6e874cb68d63
+      state: present
+      tags:
+        foo: bar
