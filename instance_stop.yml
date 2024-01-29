@@ -1,7 +1,7 @@
 - hosts: localhost
   gather_facts: false
   tasks:
-  - name: start specific number of multiple instances
+  - name: Delete instance
     amazon.aws.ec2_instance:
       name: tono
       state: absent
