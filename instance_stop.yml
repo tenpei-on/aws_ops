@@ -1,0 +1,7 @@
+- hosts: localhost
+  gather_facts: false
+  tasks:
+  - name: start specific number of multiple instances
+    amazon.aws.ec2_instance:
+      name: i-0e27eec98393f641a
+      state: absent
